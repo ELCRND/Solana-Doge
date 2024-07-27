@@ -78,6 +78,7 @@
   }
   @media screen and (max-width: 1439px) {
     border-left: none;
+    padding: 40px 30px;
   }
   @media screen and (max-width: 779px) {
     padding: 30px 20px;
@@ -126,6 +127,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    transition: filter 200ms ease;
 
     @media screen and (max-width: 1599px) {
       display: none;
@@ -139,9 +141,13 @@
     }
 
     &:hover {
+      filter: brightness(0.6);
       rect {
         animation: dash 5s linear infinite forwards;
       }
+    }
+    &:active {
+      filter: brightness(1);
     }
   }
 }
@@ -225,8 +231,9 @@
 
   @media screen and (max-width: 1439px) {
     display: flex;
-    justify-content: center;
-    align-items: end;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
   }
 
   &:first-of-type {

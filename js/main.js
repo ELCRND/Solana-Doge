@@ -34,7 +34,7 @@ const gap = +window.getComputedStyle(slider).gap.replaceAll(/[a-z]/g, "");
 document.querySelector("#prev").addEventListener("click", () => {
   if (offset == 0) return;
 
-  offset -= slider.firstElementChild.offsetWidth + gap;
+  offset -= slider.offsetWidth + gap;
 
   slider.classList.remove("move");
   slider.style.translate = `-${offset}px 0`;
@@ -46,8 +46,7 @@ document.querySelector("#prev").addEventListener("click", () => {
 document.querySelector("#next").addEventListener("click", () => {
   if (step >= slider.childElementCount) return;
 
-  offset += slider.firstElementChild.offsetWidth + gap;
-  console.log(slider.firstElementChild.offsetWidth);
+  offset += slider.offsetWidth + gap;
 
   slider.classList.remove("move");
   slider.style.translate = `-${offset}px 0`;
@@ -63,9 +62,11 @@ window.addEventListener("resize", () => {
     step = 1;
     return;
   }
+
   if (offset == 0) return;
+
+  offset = (slider.offsetWidth + gap) * (step - 1);
   slider.classList.remove("move");
-  slider.style.translate = `-${(slider.offsetWidth + gap) * (step - 1)}px 0`;
-  console.log(gap);
+  slider.style.translate = `-${offset}px 0`;
   slider.classList.add("move");
 });
