@@ -25,6 +25,13 @@
   width: min(1212px, 100%);
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1599px) {
+    width: min(1004px, 100%);
+  }
+  @media screen and (max-width: 1439px) {
+    width: min(1140px, 100%);
+  }
 }
 
 .roadmap__title {
@@ -101,6 +108,7 @@
 
     & > span {
       margin-bottom: 13px;
+      display: block;
       font-size: 44px;
       line-height: 120%;
       text-transform: uppercase;

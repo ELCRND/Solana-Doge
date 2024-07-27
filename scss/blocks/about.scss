@@ -188,6 +188,7 @@
     }
     @media screen and (max-width: 1439px) {
       max-width: 208px;
+      width: 100%;
       font-size: 24px;
       text-align: center;
       position: absolute;
@@ -195,6 +196,9 @@
       left: 50%;
       translate: -50% 0;
       z-index: 3;
+    }
+    @media screen and (max-width: 779px) {
+      bottom: 23px;
     }
   }
 }
@@ -252,6 +256,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+
+  @media screen and (max-width: 779px) {
+    bottom: 33px;
+  }
 
   button {
     width: 42px;

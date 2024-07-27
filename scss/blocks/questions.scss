@@ -1,0 +1,129 @@
+.questions {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: #000;
+
+  @media screen and (max-width: 1599px) {
+    padding-top: 50px;
+    padding-bottom: 136px;
+  }
+  @media screen and (max-width: 1439px) {
+    padding-top: 87px;
+    padding-bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media screen and (max-width: 779px) {
+    padding: 40px 20px;
+  }
+}
+
+.questions__container {
+  width: min(1140px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 779px) {
+    flex-direction: column;
+    justify-content: start;
+    gap: 16px;
+  }
+}
+
+.questions__title {
+  font-size: 64px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+
+  @media screen and (max-width: 1599px) {
+    font-size: 52px;
+  }
+  @media screen and (max-width: 1439px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 779px) {
+    font-size: 34px;
+  }
+}
+
+.questions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media screen and (max-width: 779px) {
+    gap: 10px;
+  }
+}
+
+.question {
+  max-width: 586px;
+  padding: 26px;
+  border: 1px solid #4d4d4d;
+  border-radius: 20px;
+
+  @media screen and (max-width: 1439px) {
+    max-width: 335px;
+    padding: 15px 20px;
+  }
+}
+
+.question__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+
+  @media screen and (max-width: 1439px) {
+    padding-right: 20px;
+    font-size: 20px;
+    gap: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    rotate: -45deg;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.question__answer {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #969696;
+  display: none;
+
+  @media screen and (max-width: 1439px) {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+.question__btn:has(:checked) {
+  &::after {
+    rotate: -225deg;
+  }
+
+  & + .question__answer {
+    display: block;
+  }
+}

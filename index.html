@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solana Doge</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -42,7 +43,7 @@
     </header>
 
     <!-- HOME -->
-    <section class="home">
+    <section class="home" id="home">
 
 
         <h1 class="home__title">
@@ -70,9 +71,8 @@
     </section>
 
 
-
     <!-- ABOUT -->
-    <section class="about">
+    <section class="about" id="about">
 
         <div class="about__title">
             <h2>
@@ -153,7 +153,7 @@
 
 
     <!-- ROADMAP -->
-    <section class="roadmap">
+    <section class="roadmap" id="roadmap">
 
         <div class="roadmap__container">
 
@@ -230,7 +230,7 @@
 
 
     <!-- QUESTIONS -->
-    <section class="questions">
+    <section class="questions" id="questions">
 
         <div class="questions__container">
 
@@ -240,9 +240,10 @@
 
                 <li>
                     <div class="question">
-                        <button type="button" class="question__btn">
-                            When will the game be released?
-                        </button>
+                        <label class="question__btn">
+                            <input type="checkbox">
+                            <span>When will the game be released?</span>
+                        </label>
                         <div class="question__answer">
                             The official release is scheduled for Q1 2025. We'll keep you updated with all the latest
                             news as we approach the launch date!
@@ -252,9 +253,10 @@
 
                 <li>
                     <div class="question">
-                        <button type="button" class="question__btn">
+                        <label class="question__btn">
+                            <input type="checkbox">
                             How can I join the beta testing?
-                        </button>
+                        </label>
                         <div class="question__answer">
                             Beta testing will begin in Q3 2024. Follow us on social media and subscribe to our
                             newsletter to get the latest updates and secure your spot in the beta!
@@ -264,9 +266,10 @@
 
                 <li>
                     <div class="question">
-                        <button type="button" class="question__btn">
+                        <label class="question__btn">
+                            <input type="checkbox">
                             What kind of support will you offer post-launch?
-                        </button>
+                        </label>
                         <div class="question__answer">
                             We are dedicated to providing continuous support with regular updates, bug fixes, and new
                             content to ensure a great gaming experience.
@@ -276,9 +279,10 @@
 
                 <li>
                     <div class="question">
-                        <button type="button" class="question__btn">
+                        <label class="question__btn">
+                            <input type="checkbox">
                             Can players provide feedback or suggest new features?
-                        </button>
+                        </label>
                         <div class="question__answer">
                             Absolutely! We welcome player feedback and suggestions through our official channels. Your
                             input is crucial in helping us improve the game!
@@ -287,6 +291,29 @@
                 </li>
 
             </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <section class="footer">
+
+        <div class="footer__container">
+
+            <div>
+                <h2>DOGETAP</h2>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#roadmap">roadmap</a></li>
+                    <li><a href="#questions">Questions</a></li>
+                </ul>
+            </div>
+
+            <span>© 2024 DOGETAP. All Rights Reserved.</span>
 
         </div>
 

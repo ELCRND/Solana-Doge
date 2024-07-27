@@ -1,7 +1,6 @@
 const menuBtn = document.querySelector(".header__menu-btn");
 const menu = document.querySelector(".header__menu");
-// const code = document.querySelector(".token__code");
-// const tooltip = document.querySelector(".tooltip");
+const slider = document.querySelector(".slider");
 
 // открыть/закрыть меню
 menuBtn.addEventListener("click", () => {
@@ -19,14 +18,6 @@ document.querySelectorAll(".menu__link").forEach((link) =>
   })
 );
 
-// копирование кода в буфер обмена
-// document.querySelector(".token__copy").addEventListener("click", () => {
-//   navigator.clipboard.writeText(code.innerText);
-//   tooltip.classList.add("visible");
-//   setTimeout(() => tooltip.classList.remove("visible"), 600);
-// });
-
-const slider = document.querySelector(".slider");
 let step = 1;
 let offset = 0;
 const gap = +window.getComputedStyle(slider).gap.replaceAll(/[a-z]/g, "");
